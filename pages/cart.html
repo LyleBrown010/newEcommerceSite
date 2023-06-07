@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style/cart.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Imraan Gadget Shop</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+          <div class="nav-links">
+            <ul>
+              <img
+                src="https://i.postimg.cc/L40McznY/logo.png"
+                alt="Our Logo"
+                style="height: 3rem; margin: 0"
+              />
+              <a href="../index.html"><li>Home</li></a>
+              <a href="./products.html"><li>Products</li></a>
+              <a href="./about.html"><li>About us</li></a>
+              <a href="./contact.html" class="active"><li>Contact us</li></a>
+              <a href="./cart.html"><li>Cart</li></a>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    <main>
+        <!-- actual cart part -->
+        <section class="cart-section">
+            <h1> Shopping cart</h1>
+            <!-- the cart table .... -->
+            <button onclick="empty()" id="empty-cart"> Empty cart </button>
+            <table class="cart-box">
+                <thead>
+                    <tr>
+                        <th class="table-headings">Name</th>
+                        <th class="table-headings">Price</th>
+                        <th class="table-headings">Quantity</th>
+                        <th class="table-headings">Subtotal</th>
+                        <th class="table-headings"></th>
+                    </tr>
+                </thead>
+                <br>
+                <tbody id="cartContent"> </tbody>
+                <br>
+                <tfoot>
+                    <tr class="total-section">
+                        <td class="total"> Total: </td>
+                        <td id="itemCount"> </td>
+                        <td id="total"></td>
+                    </tr>
+                    <br>
+                </tfoot>
+            </table>
+            <button id="checkout" onclick="checkout()">Checkout</button>
+        </section>
+        <!--  random products -->
+        <section class="random-products">
+            <div>
+                <h1>Products</h1>
+            </div>
+            <div>
+                <!-- this need it's own array... -->
+                <!-- linked to js -->
+                <div class="products"></div>
+            </div>
+        </section>
+    </main>
+    <!-- The foot -->
+    <footer>
+        <div class="footer-container">
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-youtube"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>Copyright © 2023 : Designed by <span class="designer">Imraan Gadgets</span></p>
+            </div>
+        </div>
+    </footer>
+    <script src="./Js/index.js"></script>
+</body>
+</html>
